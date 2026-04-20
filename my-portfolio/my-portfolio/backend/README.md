@@ -221,3 +221,51 @@ backend/
 ## License
 
 MIT
+Deploy Backend → Render
+Go to render.com → sign in with GitHub
+"New" → "Web Service" → select hafiz-bekele/portfolio
+Set:
+Root Directory: my-portfolio/my-portfolio/backend
+Build Command: npm install
+Start Command: node server.js
+Add these environment variables one by one:
+Key	Value
+MONGODB_URI	mongodb+srv://hafizbekel211:X0MhqTPxqz9bMZg6@cluster0.cnvqhag.mongodb.net/portfolio?retryWrites=true&w=majority
+EMAIL_HOST	smtp.gmail.com
+EMAIL_PORT	587
+EMAIL_USER	hafizbekele434@gmail.com
+EMAIL_PASS	quxajllkhhikkxfr
+EMAIL_FROM	hafizbekele434@gmail.com
+EMAIL_TO	hafizbekele434@gmail.com
+FRONTEND_URL	https://your-vercel-url.vercel.app ← update after step 2
+Click Deploy. Copy the Render URL (e.g. https://portfolio-xxxx.onrender.com)
+Deploy Frontend → Vercel
+Go to vercel.com → sign in with GitHub
+"New Project" → select hafiz-bekele/portfolio
+Set Root Directory: my-portfolio/frontend
+Add environment variable:
+Key	Value
+NEXT_PUBLIC_API_URL	https://portfolio-xxxx.onrender.com ← your Render URL
+Click Deploy. Done.
+Once both are live, go back to Render and update FRONTEND_URL to your Vercel URL, then redeploy the backend. That's it.
+
+Credits used: 0.82
+Elapsed time: 2m 42s
+
+
+
+1 change accepted
+(
+View all
+)
+Revert
+
+
+.gitignore
+
+
+
+
+
+
+
